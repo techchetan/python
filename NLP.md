@@ -1,1 +1,35 @@
+# NLP processing
+#### 1. Prerequisite for NLP learn
+        You can use other tool also like vs code with python
+        1. Download https://www.anaconda.com/download/
+           There are detaill mention on website we need to follow the same for installing
+        2. open conda prompt and install NLP related lib
+        3. Activate the virtual environment
+           $ conda activate  <vd or nevironment name>
+           $ coda deactivate 
+        4. jupyter notebook - It will open Jupyter   
+#### 2. Basic Print formating using fstring
+        1. print(f"Hello my name is {variable}")
+        2. print(f"{auther:{10}} {topic:{30}})
+           Its show minimum number of column or space like table column, in case you want allign in one side you can use below syntex 
+           print(f"{auther:{10}} {topic:{30}} {price:>{30}})
+        3. Handle datetime formating
+           from datetime import datetime
+           today = datetime(year=2024,month=1,day=2)
+           print(f"{todaye:%B}")
+
+  ### You can use https://strftime.org/ for more formate
+#### 3. Working with text file
+        1. myfile = open(<path + fileName.txt>) use \\ for define path
+           myfile.read()
+           If you read multiple time then above command return string one time and next time it will show empty because curesor is endof the file. To resolve this error we need to reset the cursor use below command
+           myfile.seek(0)
+
+           Always close the file using myfile.close()
+        2. ** myfile.readline ** is read line by line and return array with all lines
+        3. myfile = open('text.txt', 'w+') this option is overwrite complet file. if we use a+ it will create new file if does not exist
+        4. Context manager for open file
+           with open('help.txt','r') as newFile:
+               ...code
+           
 
