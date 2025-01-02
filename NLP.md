@@ -23,8 +23,8 @@
 #### 3. Working with text file
         1. myfile = open(<path + fileName.txt>) use \\ for define path
            myfile.read()
-           If you read multiple time then above command return string one time and next time it will show empty because curesor is 
-           end of the file. To resolve this error we need to reset the cursor use below command
+           If you read multiple time then above command return string one time and next time it will show empty because curesor 
+           is end of the file. To resolve this error we need to reset the cursor use below command
            
            myfile.seek(0)
 
