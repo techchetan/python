@@ -22,7 +22,9 @@
 #### 3. Working with text file
         1. myfile = open(<path + fileName.txt>) use \\ for define path
            myfile.read()
-           If you read multiple time then above command return string one time and next time it will show empty because curesor is endof the file. To resolve this error we need to reset the cursor use below command
+           If you read multiple time then above command return string one time and next time it will show empty because curesor is 
+           end of the file. To resolve this error we need to reset the cursor use below command
+           
            myfile.seek(0)
 
            Always close the file using myfile.close()
@@ -31,5 +33,17 @@
         4. Context manager for open file
            with open('help.txt','r') as newFile:
                ...code
-           
+#### 4. Working with pdf file
+        You need to use PyPDF2 library
+        1. Install PyPDF2
+                pip install PyPDF2
+        2. Example
+                import PyPDF2
+                myfile = open('text.pdf',mode='rb')
+                pdfReader = PYPDF2.PdfFileReader(myfile)
+                pdfReader.numPages
+                page1 = pdfReader.getPage(0)
+                page1.extractText()
+#### 5. Regular Expressions
 
+                
