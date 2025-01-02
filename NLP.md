@@ -11,7 +11,8 @@
 #### 2. Basic Print formating using fstring
         1. print(f"Hello my name is {variable}")
         2. print(f"{auther:{10}} {topic:{30}})
-           Its show minimum number of column or space like table column, in case you want allign in one side you can use below syntex 
+           Its show minimum number of column or space like table column, in case you want allign in one side you can use below 
+           syntex 
            print(f"{auther:{10}} {topic:{30}} {price:>{30}})
         3. Handle datetime formating
            from datetime import datetime
@@ -29,7 +30,8 @@
 
            Always close the file using myfile.close()
         2. ** myfile.readline ** is read line by line and return array with all lines
-        3. myfile = open('text.txt', 'w+') this option is overwrite complet file. if we use a+ it will create new file if does not exist
+        3. myfile = open('text.txt', 'w+') this option is overwrite complet file. if we use a+ it will create new file if does 
+           not exist
         4. Context manager for open file
            with open('help.txt','r') as newFile:
                ...code
