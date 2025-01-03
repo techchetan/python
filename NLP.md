@@ -47,5 +47,24 @@
                 page1 = pdfReader.getPage(0)
                 page1.extractText()
 #### 5. Regular Expressions
+        1. Search phone number r'\d{3}-\d{3}-\d{4}'
+        2. text = "The Phone number id 444-564-9847"
+           pattern = "Phone"
+           match = re.search(pattern,text)
+           match.span()
+           >>>> resule is (4,9)
 
-                
+           You can try other function related **re**
+        3. Other example
+           re.findall(pattern,text)  --For multiple occurence, it will show value
+           re.finditer(pattern,text)   -- it will show span, you can display using for loop
+
+           for match in re.finditer(pattern,text):
+                   print(match.span())
+
+        4. You can try 
+           1. r"(\d{3})-(\d{3})-(\d{4})'
+           2. re.findall(r".at","there ai cat under the hat")
+           3. text = "I am 4 person going to 24 building for running 2 km"
+              re.findall(r"[^\d]+")   -- exclusion of digit so [] use for grouping and ^ use for exclusion
+              >>>> result ["I am  ","person going to "," building for running "," km"]  
