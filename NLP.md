@@ -1,6 +1,6 @@
 # NLP processing
 #### 1. Prerequisite for NLP learn
-        You can use other tool also like vs code with python
+        You can use another tool also like vs code with python
         1. Download https://www.anaconda.com/download/
            There are detaill mention on website we need to follow the same for installing
         2. open conda prompt and install NLP related lib
@@ -68,3 +68,19 @@
            3. text = "I am 4 person going to 24 building for running 2 km"
               re.findall(r"[^\d]+")   -- exclusion of digit so [] use for grouping and ^ use for exclusion
               >>>> result ["I am  ","person going to "," building for running "," km"]  
+#### 6. Basics NLP
+        1. Tokennization
+        2. Stemming
+        3. Lemmatization
+        4. Stop words
+#### 7. Spacy
+        Spacy is natureal language propcessing open sourece library
+        It is use for handle NLP task
+        Spacy is release in 2015
+   ##### NLTK is another natural language tool kit is very popular open source but it is less efficiant to implementation. NLTK is used for sentimental analysis
+   ### Install Specy on conda
+           conda install -c conda-forge spacy
+           
+
+        
+        
