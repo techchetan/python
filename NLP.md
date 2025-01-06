@@ -78,8 +78,18 @@
         It is use for handle NLP task
         Spacy is release in 2015
    ##### NLTK is another natural language tool kit is very popular open source but it is less efficiant to implementation. NLTK is used for sentimental analysis
-   ### Install Specy on conda
+   ### Install Spacy on conda
            conda install -c conda-forge spacy
+           python -m spacy download en
+#### 8. NLP
+        nlp() function from spaCy  automatically take text and run some operation for tag,parser and describe the data,part of speech en so on. This call as tokenization
+        Example:
+                import spacy
+                nlp = spacy.load('en_core_web_sm')   # Loading language
+                doc = nlp(u'Tesla is looking at buying U.S. startup for $6 million') -- get document with token each word is token
+                ###### display token
+                for token in doc;'
+        
            
 
         
