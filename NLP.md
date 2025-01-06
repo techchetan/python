@@ -88,7 +88,11 @@
                 nlp = spacy.load('en_core_web_sm')   # Loading language
                 doc = nlp(u'Tesla is looking at buying U.S. startup for $6 million') -- get document with token each word is token
                 ###### display token
-                for token in doc;'
+                for token in doc:
+                    print(token.text, token.pos_)   -- It shows list of token. pos is part of speech 
+        >> Show sentence 
+                for sentence in doc.sents:
+                    print(sentence)
         
            
 
