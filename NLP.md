@@ -82,7 +82,8 @@
            conda install -c conda-forge spacy
            python -m spacy download en
 #### 8. NLP
-        nlp() function from spaCy  automatically take text and run some operation for tag,parser and describe the data,part of speech en so on. This call as tokenization
+        nlp() function from spaCy  automatically take text and run some operation for tag,parser and describe the data,
+        part of speech en so on. This call as tokenization
         Example:
                 import spacy
                 nlp = spacy.load('en_core_web_sm')   # Loading language
@@ -93,7 +94,30 @@
         >> Show sentence 
                 for sentence in doc.sents:
                     print(sentence)
-        
+
+#### NLP Visulizer
+        example
+                from spacy import displacy
+                doc = nlp("sdsadsa")
+                displacy.render(doc, style='dep', jupyter=True, options = {'distance':110})
+
+#### NLP Stemming
+        Stemming is select similer word from document. Spacy is not support to stemming as it support lemmatization. you can us NLTK
+        example
+                from nltk.stem.porter import PorterStemmer
+                
+                p_stemmer = PorterStemmer()
+                words = ['run','runner','ran','runs']
+
+                for word in words:
+                    print(word +'----->' + p_stemmer.stem(word))
+
+                >>RESULT>> run -----> run
+                           runner ----->runner
+                           ran -----> ran
+                           runs -----> run
+                
+                
            
 
         
