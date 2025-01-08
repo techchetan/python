@@ -118,7 +118,29 @@
                            runs -----> run
                 
                 
-           
+#### 9. STOP words:
+         Stop words is verty common words those are not adding any information insentence like The,it
+         
+         import spacy
+         nlp = spacy.load('en_core_web_sm')   # Loading language
+         print(nlp.Defaults.stop_words)   # it shows all stop words
+         nlp.vocab('is').is_stop   >> output True
+         nlp.Defaults.stop_words.add('hello')  **# Add new stop word**
+         nlp.vocab('hello').is_stop = True
+#### 10. Phrase Matching:
+        import spacy
+        nlp = spacy.load('en_core_web_sm')   # Loading language
 
-        
-        
+        from spacy.matcher import Matcher
+        matcher = Matcher(nlp.vocab)
+        # Search SolarPower 
+        pattern1 = [{'LOWER': 'solarpower'}]
+
+        # Search Solar-Power 
+        pattern1 = [{'LOWER': 'solar-power'}]
+
+        matcher.add('SolarPower', None, pattern1, pattern2)
+        doc = nlp(u"Ther Solar Power industry continues to grow a Solar-Power")
+        found_docs= matcher(doc)
+        print(found_docs)   # It shows numbers and start and end token position
+        >>output [(123234545454353,1,3)]
